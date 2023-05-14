@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+
+/* SIMPLE RESET applied to all items: */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Skips the math */
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+}
+body {
+    margin-top: 5vh;
+    height: 100vh;
+    background-color: #C2BBF0; 
+}
+h1 {
+    font-size: 64px;
+    text-align: center;
+    color: #F1E3F3;
+}
+#main-footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+}
+.memory-game {
+    width: 640px;
+    height: 640px;
+    margin: auto; /* Centers vertically & horizontally */
+    display: flex; /* Items set to shrink in width to fit container */
+    flex-wrap: wrap; /* Wraps along multiple lines according to size */
+    perspective: 1000px; /* Subtle 3D flip effect along z plane */
+}
+.memory-card {
+    width: calc(25% - 10px); /* 4 cards per row minus margin */
+    height: calc(33.333% - 10px); /* 3 rows minus margin */
+    margin: 5px;
+    position: relative; /* Position the children absolutely, relative to it */
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    transform: scale(1); /* Click effect */
+    transform-style: preserve-3d; /* Prevents flattening elements to the z = 0 plane */
+    transition: transform 0.4s; /* Produces the spin movement effect */
+}
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+}
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+.front-face {
+    transform: rotateY(180deg); /* Shows other side of card upon flip */
+}
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: absolute; /* Removes the elements from original 
+    position, and stacks them on top of each other */
+    border-radius: 5px;
+    background: #62BFED;
+    backface-visibility: hidden; /* Reveals image underneath it */
+}

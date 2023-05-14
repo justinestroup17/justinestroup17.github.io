@@ -12,7 +12,6 @@ html {
 }
 body {
     background-color: #000 !important;
-
     min-height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -28,7 +27,6 @@ body {
     -ms-flex-align: center;
     align-items: center;
 }
-
 main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -72,6 +70,9 @@ a {
 .dev {
     margin-bottom: 5%;
     font-size: 1.5em;
+}
+.project-name {
+    text-align: center;
 }
 .role-2 {
     border-left: #000 solid 0.1em;
