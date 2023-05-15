@@ -63,6 +63,10 @@ nav {
     background-color: #000;
     border: none;
 }
+footer {
+    padding-top: 100px;
+    min-height: 200px;
+}
 a {
     text-decoration: none !important;
     color: #fff;

@@ -24,6 +24,26 @@ class UI {
             {
                 title: 'Pants',
                 isbn: '1'
+            },
+            {
+                title: 'Helmet',
+                isbn: '1'
+            },
+            {
+                title: 'Goggles',
+                isbn: '1'
+            },
+            {
+                title: 'Google Lenses',
+                isbn: '1'
+            },
+            {
+                title: 'Base Layer',
+                isbn: '1'
+            },
+            {
+                title: 'Long Socks',
+                isbn: '1'
             }
         ];
         const gear = DefaultGear;
@@ -56,7 +76,7 @@ class UI {
         div.className = `alert alert-${className}`;
         div.appendChild(document.createTextNode(message));
         const container = document.querySelector('.container');
-        const form = document.querySelector('#book-form');
+        const form = document.querySelector('#gear-form');
         // Insert the div before the form
         container.insertBefore(div, form);
 
@@ -106,7 +126,7 @@ document.addEventListener('DOMContentLoaded', UI.displayBooks());
 
 // Event: Add a Book
 // Listen for a submit on form and when that happens, 
-document.querySelector('#book-form').addEventListener('submit', (e) => {
+document.querySelector('#gear-form').addEventListener('submit', (e) => {
     // Prevent actual submit (not submitting to server)
     e.preventDefault();
     // Get form values
@@ -140,7 +160,7 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
     // Remove book from storage
     Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
 
-    UI.showAlert('Book Removed', 'success');
+    UI.showAlert('Gear removed', 'success');
 });
 
 
@@ -157,7 +177,6 @@ document.querySelector('#reset-defaults').addEventListener("click", resetToDefau
 
 // Reset to defaults
 function resetToDefault() {
-    location.reload();
     UI.displayDefaults();
 }
 const yearElement = document.getElementById('year');
