@@ -7,9 +7,10 @@ class Book {
 }
 // UI Class: Handle UI Tasks
 class UI {
+    /* CANNOT GET TO WORK:
     static deleteAllBooks() {
         books.forEach((book) => UI.deleteBook(el));
-    }
+    } */
     // Don't want to instantiate the UI class, so all methods will be static
     static displayBooks() {
         
@@ -175,13 +176,14 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
     return;
 } */
 
+/* CANNOT GET TO WORK:
 document.querySelector('#clear-all').addEventListener("click", (e) => {
     const books = Store.getBooks();
     // Remove book from UI
     books.forEach((book) => UI.deleteBook(e.target));
     books.forEach((book) => Store.removeBook(e.target.parentElement.previousElementSibling.textContent));
     UI.showAlert('All gear removed', 'success');
-});
+}); */
 
 document.querySelector('#reset-defaults').addEventListener("click", resetToDefault);
 
