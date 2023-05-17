@@ -7,6 +7,9 @@ class Book {
 }
 // UI Class: Handle UI Tasks
 class UI {
+    static deleteAllBooks() {
+        books.forEach((book) => UI.deleteBook(el));
+    }
     // Don't want to instantiate the UI class, so all methods will be static
     static displayBooks() {
         
@@ -59,7 +62,7 @@ class UI {
         row.innerHTML = `
             <td>${book.title}</td>
             <td>${book.isbn}</td>
-            <td><a href="#" class="btn btn-success btn-sm delete"><i class="fas fa-regular fa-square-check"></i></a></td>
+            <td><a href="#" class="btn btn-primary btn-sm delete"><i class="fas fa-regular fa-square-check"></i></a></td>
         `;
         list.appendChild(row);
     }
@@ -82,7 +85,7 @@ class UI {
 
         // Make alert disappear in 3 seconds
         // Anything with class of alert, remove
-        setTimeout(() => document.querySelector('.alert').remove(), 3000); // 3 Seconds
+        setTimeout(() => document.querySelector('.alert').remove(), 2000); // 2 Seconds
     }
     // Makes the text in the fields go away after hitting submit
     static clearFields() {
@@ -129,8 +132,9 @@ document.addEventListener('DOMContentLoaded', UI.displayBooks());
 document.querySelector('#gear-form').addEventListener('submit', (e) => {
     // Prevent actual submit (not submitting to server)
     e.preventDefault();
-    // Get form values
-    const title = document.querySelector('#title').value;
+    // Get form values & clean up input (capitalizing first letter and lower casing the rest)
+    const title = document.querySelector('#title').value.charAt(0).toUpperCase() +
+    document.querySelector('#title').value.slice(1).toLowerCase();
     const isbn = document.querySelector('#isbn').value;
     
     // Validate all fields are entered
@@ -164,14 +168,20 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
 });
 
 
-document.querySelector('#clear-all').addEventListener("click", clearData);
-
 // Clear all
-function clearData() {
+/* function clearData() {
     localStorage.clear();
     location.reload();
     return;
-}
+} */
+
+document.querySelector('#clear-all').addEventListener("click", (e) => {
+    const books = Store.getBooks();
+    // Remove book from UI
+    books.forEach((book) => UI.deleteBook(e.target));
+    books.forEach((book) => Store.removeBook(e.target.parentElement.previousElementSibling.textContent));
+    UI.showAlert('All gear removed', 'success');
+});
 
 document.querySelector('#reset-defaults').addEventListener("click", resetToDefault);
 
