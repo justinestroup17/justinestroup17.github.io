@@ -1,3 +1,6 @@
+document.querySelector("title").focus();
+
+
 // Book Class: Represents a Book
 class Book {
     constructor(title, isbn) {
