@@ -54,3 +54,11 @@ function resetBoard() {
 
 // Loop through all cards and attach an event listener
 cards.forEach(card => card.addEventListener('click', flipCard));
+
+const yearElement = document.getElementById("year");
+copyrightYear();
+function copyrightYear() {
+    const todaysDate = new Date();
+    const year = todaysDate.getFullYear();
+    yearElement.innerHTML = year;
+}

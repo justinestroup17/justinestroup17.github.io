@@ -131,3 +131,13 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
 
     UI.showAlert('Book Removed', 'success');
 });
+
+const yearElement = document.getElementById("year"); // Automatically updates copyright year
+
+copyrightYear();
+// Get year from today's date
+function copyrightYear() {
+    const todaysDate = new Date();
+    const year = todaysDate.getFullYear();
+    yearElement.innerHTML = year;
+}
