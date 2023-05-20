@@ -11,12 +11,16 @@
 body {
     margin-top: 5vh;
     height: 100vh;
-    background-color: #C2BBF0; 
+    background-image: url("../img/background.png");
 }
 h1 {
     font-size: 64px;
     text-align: center;
     color: #F1E3F3;
+}
+.shadow-font {
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 #main-footer {
     text-align: center;

@@ -49,7 +49,7 @@ class UI {
 
         // Make alert disappear in 3 seconds
         // Anything with class of alert, remove
-        setTimeout(() => document.querySelector('.alert').remove(), 3000); // 3 Seconds
+        setTimeout(() => document.querySelector('.alert').remove(), 1500); // 3 Seconds
     }
     // Makes the text in the fields go away after hitting submit
     static clearFields() {
