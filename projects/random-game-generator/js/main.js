@@ -36,6 +36,7 @@ function openModal() {
     const game = list[Math.floor(Math.random() * 10)];
     message.innerHTML  = `${game}`;
 
+    // Condensed name to use file name in img source
     const condensedName = game.toLowerCase().replace(/\s/g, "");
     console.log(condensedName);
 
