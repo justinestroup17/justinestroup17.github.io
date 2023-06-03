@@ -69,7 +69,7 @@ closeBtn.addEventListener('click', closeModal);
 // Listen for click outside of modal (close when clicking outside of modal)
 window.addEventListener('click', clickOutside);
 
-// Listen for pickAgain button to close
+// Listen for pickAgain button to generate another random game
 pickAgain.addEventListener('click', () =>  {
     closeModal();
     openModal();
