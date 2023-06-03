@@ -51,6 +51,9 @@ const modalBtn = document.getElementById('modalBtn');
 // Get close button
 const closeBtn = document.getElementsByClassName('closeBtn')[0];
 
+// Get pick again button
+const pickAgain = document.getElementById('pickAgain');
+
 // Get game name element
 const gameName = document.getElementById('videogame');
 
@@ -65,6 +68,12 @@ closeBtn.addEventListener('click', closeModal);
 
 // Listen for click outside of modal (close when clicking outside of modal)
 window.addEventListener('click', clickOutside);
+
+// Listen for pickAgain button to close
+pickAgain.addEventListener('click', () =>  {
+    closeModal();
+    openModal();
+});
 
 // Function to open modal
 function openModal() {
