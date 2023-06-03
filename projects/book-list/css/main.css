@@ -1,3 +1,12 @@
 body {
-    background-image: url("../img/background.png");
+    background-image: url("../img/background.jpg");
+    margin: 0;
+}
+.container {
+    /* Brings footer to the bottom */
+    min-height: 90vh;
+}
+footer {
+    min-height: 50px;
+    color: #fff;
 }

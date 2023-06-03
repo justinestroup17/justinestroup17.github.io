@@ -1,28 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
  body {
-    font-family: 'Space Grotesk', Arial, Helvetica, sans-serif;
+    font-family: 'Cookie', Arial, Helvetica, sans-serif;
     font-size: 17px;
     line-height: 1.6;
     background-image: url('../img/background.jpg');
     background-color: cyan;
 }
 img {
-    width: 450px;
+    width: 400px;
     height: 300px;
 }
 .button {
-    font-family: 'Sigmar', Arial, Helvetica, sans-serif;
-    background: #124559;
+    background: #000;
     padding: 1em 2em;
     color: #fff;
     border: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 .button:hover {
     background: #4085b1;
 }
 .modal {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     display: none; /* Don't display it when the page loads, only when JavaScript calls it */
     position: fixed;
     z-index: 1; /* Order of elements (the higher the z-index, the more up front it will be */
@@ -35,7 +36,7 @@ img {
 }
 h1 {
     margin-top: 15%;
-    font-family: 'Sigmar', Arial, Helvetica, sans-serif;
+    font-size: 6em;
 }
 #buttonWrapper, h1 {
     text-align: center;
@@ -49,13 +50,13 @@ h1 {
     background-color: #f4f4f4;
     margin: 5% auto;
     width: 70%;
-    min-height: 80%;
+    min-height: 70%;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17); 
     animation-name: modalopen;
     animation-duration: 1s; /* One second */
 }
 .modal-header {
-    background-color: #598392;
+    background-color: #2f0505;
     padding: 5px;
     color: #fff;
 }
@@ -72,7 +73,7 @@ h1 {
     text-align: center;
 }
 .modal-description {
-    background: #598392;
+    background: #2f0505;
     padding: 5px;
     color: #fff;
     height: 150px;
@@ -99,10 +100,11 @@ h1 {
     to {opacity: 1}
 }
 
-#videogame {
-    font-size: 2em;
+#restaurant {
+    font-size: 3em;
     text-align: center;
     font-weight: bold;
+    font-family: 'Cookie', Arial, Helvetica, sans-serif;
 }
 /* Have pick another game button take up entire space of modal */
 #pickAgain {

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../img/favicon_io/favicon-16x16.png">
+
+    <title>Meal Picker</title>
+</head>
+<body>
+    <h1>Meal Picker</h1>
+    <div id="buttonWrapper">
+        <button id="modalBtn2" class="button">Pick Fastfood</button>    
+        <button id="modalBtn3" class="button">Pick Sitdown Restaurant</button>    
+        <button id="modalBtn1" class="button">Pick Random</button>
+
+    </div>
+    <div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="closeBtn">&times;</span>
+                <h2>Let's Eat...</h2>
+            </div>
+            <div class="modal-body">
+                <p id="restaurant">RESTAURANT</p>
+            </div>
+            <div class="modal-image">
+                <img id="placePic" src="">
+            </div>
+            <div class="modal-description">
+                <p id="describe">DESCRIPTION</p>
+            </div>
+                <button id="pickAgain" class="button">Nah...</button>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
