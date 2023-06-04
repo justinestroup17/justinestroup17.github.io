@@ -1,6 +1,14 @@
 // List of games
 const list = [
     {
+        name: "Assassin's Creed IV Black Flag",
+        description: "A video game where you play as sailor, privateer and assassin Edward Kenway exploring on and around the islands in the Caribbean Sea during the early 17th century."
+    },
+    {
+        name: "Bioshock Infinite",
+        description: "A man is sent to the flying city of Columbia to find a missing girl. However, upon arrival he discovers that the city, its people, and his objective are all not what they seem."
+    },
+    {
         name: "Call of Duty Black Ops",
         description: "Former Marine Captain and CIA operative Alex Mason, upon interrogation by an unknown party, recounts his violent experiences with the Bay of Pigs, a radical Soviet conspiracy, and the Vietnam war."
     },
@@ -13,16 +21,40 @@ const list = [
         description: "Experience the world of restaurant cooking in a highly polished, realistic kitchen. Use ovens, gas stands, pots, pans, bowls and plates, everything you need. Prepare dozens of lifelike ingredients - from vegetables through fish to steaks and poultry - to cook over 60 real dishes, or anything you like."
     },
     {
+        name: "Dying Light",
+        description: "A first-person action survival game set in a post-apocalyptic open world overrun by flesh-hungry zombies. Roam a city devastated by a mysterious virus epidemic. Scavenge for supplies, craft weapons, and face hordes of the infected."
+    },
+    {
         name: "Fallout 3",
         description: "Centuries following nuclear war, a teen leaves the safety of an underground vault in order to find their father, who left in hopes of creating a water purifier."
+    },
+    {
+        name: "Grand Theft Auto V",
+        description: "Three very different criminals team up for a series of heists and walk into some of the most thrilling experiences in the corrupt city of Los Santos."
+    },
+    {
+        name: "Layers of Fear 2",
+        description: "A first-person, psychological thriller, horror video game with an emphasis on exploration and story. Players control a Hollywood actor who heeds the call of an enigmatic director to take on the lead role in a film shot aboard an ocean liner."
     },
     {
         name: "Left 4 Dead",
         description: "A multi player co-op in post-apocalyptic Pennsylvania, where four immune survivors, Francis, Bill, Zoey, and Louis fight through hordes of zombies and Special Infected as they make their way to extraction zones."
     },
     {
+        name: "PC Building Simulator",
+        description: "Build and grow your very own computer repair enterprise as you learn to diagnose, fix and build PCs."
+    },
+    {
+        name: "Pokemon Soul Silver",
+        description: "Unravel mysteries as you journey through new places such as the Ruins of Alph, meet new people such as the Kimono girls of Ecruteak City, and battle Team Rocket as they make their comeback."
+    },
+    {
         name: "Portal 2",
         description: "Many years after \"Portal\", Chell reawakens at Aperture Science and tries to stop GLaDOS once again with the help of Wheatley, who has his own plans for the historical facility."
+    },
+    {
+        name: "Ring Fit Adventure",
+        description: "Explore more than 100 levels in over 20 vibrant worlds in your quest to defeat a bodybuilding dragon and his minions using real-life exercises! Traverse grass-swept plains by jogging in place, attack enemies with overhead shoulder presses, and refill your health meter by striking some yoga poses."
     },
     {
         name: "Rocksmith",
@@ -37,8 +69,16 @@ const list = [
         description: "You will inherit an old farm from your grandfather. Start by clearing your farm and start farming. Stardew Valley also has a fishing system, down mines, and many other festivals."
     },
     {
+        name: "Super Mario Odyssey",
+        description: "Mario must travel to worlds unknown in order to stop Bowser from marrying Princess Peach."
+    },
+    {
         name: "The Sims 4",
         description: "The Sims 4 is the ultimate life simulation game—create unique characters, build dream homes, and let chaos unfold."
+    },
+    {
+        name: "Watch Dogs 2",
+        description: "In San Francisco, hacker Marcus Holloway joins DedSec, to take down a corrupt system by fighting and hacking his way through the entire San Francisco Bay."
     }
 ];
 
@@ -71,6 +111,7 @@ window.addEventListener('click', clickOutside);
 
 // Listen for pickAgain button to generate another random game
 pickAgain.addEventListener('click', () =>  {
+    console.log(list.length)
     closeModal();
     openModal();
 });
@@ -80,7 +121,7 @@ function openModal() {
     modal.style.display = 'block';
 
     // Get random number
-    const random = [Math.floor(Math.random() * 10)];
+    const random = [Math.floor(Math.random() * list.length)];
 
     // Get game name based on random number
     const game = list[random].name;
