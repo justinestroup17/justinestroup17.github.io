@@ -111,7 +111,6 @@ window.addEventListener('click', clickOutside);
 
 // Listen for pickAgain button to generate another random game
 pickAgain.addEventListener('click', () =>  {
-    console.log(list.length)
     closeModal();
     openModal();
 });

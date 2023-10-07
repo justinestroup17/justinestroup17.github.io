@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 * {
     box-sizing: border-box;
+    color: #ddd;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 body {
     background-image: url('img/snowy-night.jpg');
@@ -15,10 +17,8 @@ body {
 }
 h1 {
     font-weight: normal;
-    color: #ddd;
     font-size: 4rem;
     margin-top: 5rem;
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 .countdown-container {
     display: flex;
@@ -30,14 +30,11 @@ h1 {
     font-size: 6rem;
     line-height: 1;
     margin: 1rem 2rem;
-    color: #ddd;
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+
 }
 .countdown-el {
     text-align: center;
 }
 .countdown-el span {
     font-size: 1.3rem;
-    color: #ddd;
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
