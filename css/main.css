@@ -38,10 +38,12 @@
 /* Projects Page Styling */
 .projects {
     background-color: #000;
-    flex-direction: column;
     font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
     font-size: 24px;
     color: #fff;
+}
+.projects-container {
+    flex-direction: column;
 }
 .projects nav {
     top: 0;
@@ -64,7 +66,7 @@
     grid-auto-rows: minimax(150px, auto);
     grid-gap: 50px;
     align-content: stretch;
-    height: 100vh;
+    min-height: 100vh;
 }
 .projects img {
     height: 200px;
@@ -80,6 +82,12 @@
 .projects a {
     text-decoration: none;
     color: #fff;
+}
+.projects footer {
+    text-align: center;
+    min-height: 3em;
+    margin: 100px 0 20px 0;
+    padding: 10px;
 }
 /* End Projects Page Styling */
 
