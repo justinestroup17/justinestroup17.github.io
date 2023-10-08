@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
 
  body {
     font-family: 'Cookie', Arial, Helvetica, sans-serif;
@@ -108,4 +110,14 @@ h1 {
 /* Have pick another game button take up entire space of modal */
 #pickAgain {
     width: 100%;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+nav a {
+    font-family: 'Amatic SC', sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
 }
