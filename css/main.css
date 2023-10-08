@@ -3,119 +3,107 @@
 * {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-html {
+/* Portfolio Splash Page Styling */
+.portfolio {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/background.jpg");
     font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
     font-size: 24px;
-    color: #000;
 }
-body {
-    background-image: url("../img/background.jpg");
-    min-height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+.portfolio main {
+    max-width: 400px;
 }
-
-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 100%;
+.portfolio main .dev {
+    font-size: 1.75em;
+    margin: 30px;
+    text-align: center;
 }
-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.portfolio main .links {
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 1rem;
-    width: 100%;
-    height: 48px;
-    position: fixed;
-    top: 0;
-    border-bottom: 1px solid #fff;
-    z-index: 2;
-    background-color: #fff;
-    color: #000 !important;
 }
-a {
-    text-decoration: none !important;
+.portfolio a {
+    text-decoration: none;
     color: #000;
 }
-.dev {
-    margin-bottom: 5%;
-    font-size: 1.5em;
-}
-.role-2 {
-    border-left: #000 solid 0.1em;
-}
-.roles {
-    padding-left: 1em;
-    padding-right: 1em;
-}
-.white {
-    background-color: #fff;
-    color: #000;
-}
+/* End Portfolio Splash Page Styling */
 
-section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    z-index: 1;
-    padding-top: 48px;
-}
-
-/* Begin Projects Page Only */
-.projects-page {
-    background-color: #000 !important;
-    background-image: none;
-    color: #fff;
-}
-.projects-page nav {
+/* Projects Page Styling */
+.projects {
     background-color: #000;
-    border: none;
-}
-.projects-page nav a {
+    flex-direction: column;
+    font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
+    font-size: 24px;
     color: #fff;
 }
+.projects nav {
+    top: 0;
+    min-height: 100px;
+}
+.projects nav a {
+    padding: 1em;
+}
+.projects-title {
+    text-align: center;
+}
+.projects .grid-container {
+    display: flex;
+    justify-content: center;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 200px);
+    grid-auto-rows: minimax(150px, auto);
+    grid-gap: 50px;
+    align-content: stretch;
+    height: 100vh;
+}
+.projects img {
+    height: 200px;
+    width: 200px;
+}
+.project-name {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    min-height: 100px;
+    align-items: center;
+}
+.projects a {
+    text-decoration: none;
+    color: #fff;
+}
+/* End Projects Page Styling */
+
+/* Start Resume Page Styling */
+.resume {
+    height: 100vh;
+    background-image: url("../img/background.jpg");
+    font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+.resume-iframe {
+    margin-top: 1%;
+    width: 75%;
+    height: 1000px;
+}
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.resume nav a {
+    padding: 1em;
+    text-align: left;
+    text-decoration: none;
+    color: #000;
+}
+/* End Resume Page Styling */
