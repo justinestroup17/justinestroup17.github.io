@@ -46,6 +46,8 @@
 .projects nav {
     top: 0;
     min-height: 100px;
+    display: flex;
+    justify-content: space-between;
 }
 .projects nav a {
     padding: 1em;
@@ -83,7 +85,7 @@
 
 /* Start Resume Page Styling */
 .resume {
-    height: 100vh;
+    min-height: 100vh;
     background-image: url("../img/background.jpg");
     font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
     font-size: 24px;
@@ -91,7 +93,7 @@
 .resume-iframe {
     margin-top: 1%;
     width: 75%;
-    height: 1000px;
+    height: 900px;
 }
 .resume-container {
     display: flex;
@@ -99,7 +101,10 @@
     align-items: center;
     justify-content: center;
 }
-
+.resume nav {
+    display: flex;
+    justify-content: space-between;
+}
 .resume nav a {
     padding: 1em;
     text-align: left;
