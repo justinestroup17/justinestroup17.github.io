@@ -114,10 +114,12 @@ h1 {
 nav {
     display: flex;
     justify-content: space-between;
+    top: 0;
 }
 nav a {
     font-family: 'Amatic SC', sans-serif;
     text-decoration: none;
     color: #000;
     font-size: 24px;
+    padding: 1em;
 }
