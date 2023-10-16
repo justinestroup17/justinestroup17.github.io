@@ -25,6 +25,10 @@ nav a {
 }
 h1 {
   text-align: center;
+  font-size: 2.2rem;
+  color: #ddd;
+  text-shadow: 3px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+
 }
 main {
   display: flex;
